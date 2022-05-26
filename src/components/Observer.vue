@@ -1,6 +1,6 @@
 <template>
   <!-- observer가 observe할 요소-->
-  <div ref="scrollDiv"></div>
+  <div ref="scrollDiv" class="iob"><span class="loading">loading</span></div>
 </template>
 
 <script>
@@ -37,8 +37,13 @@ export default {
 }
 </script>
 
-<style scoped>
-div {
-  opacity: 0;
+<style scoped lang="scss">
+.iob::v-deep  {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    //position: fixed;
+    //bottom: 0;
+    //left: 0;
 }
 </style>
